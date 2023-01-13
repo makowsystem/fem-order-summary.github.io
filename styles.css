@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	--clr-primary1: hsl(225, 100%, 94%);
+	--clr-primary2: hsl(245, 75%, 52%);
+
+	--clr-neutral1: hsl(225, 100%, 98%);
+	--clr-neutral2: hsl(224, 23%, 55%);
+	--clr-neutral3: hsl(223, 47%, 23%);
+
+	--ff-red-hat-display: 'Red Hat Display', sans-serif;
+
+	--fw-medium: 500;
+	--fw-bold: 700;
+	--fw-black: 900;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("images/pattern-background-desktop.svg");
+	background-repeat: no-repeat;
+	background-color: var(--clr-primary1);
+
+	font-family: var(--ff-red-hat-display);
+	font-size: 16px;
+	color: var(--clr-neutral2);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  widows: 1px;
+}
+
+.order {
+	background-color: white;
+	max-width: 450px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.order img {
+	width: 100%;
+	display: block;
+}
+
+.order__content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 3rem 3rem 2rem;
+}
+
+.order__content h2 {
+	text-align: center;
+	font-weight: var(--fw-black);
+	color: var(--clr-neutral3);
+}
+
+.order__content p {
+	text-align: center;
+	line-height: 1.6;
+}
+
+.order__plan {
+	background-color: var(--clr-neutral1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+	border-radius: 1rem;
+}
+
+.order__plan a {
+	color: var(--clr-primary2);
+	font-weight: var(--fw-bold);
+	font-size: 15px;
+	text-decoration: underline var(--clr-neutral3);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 1px;
+}
+
+.order__plan a:is(:hover, :focus) {
+	color: hsl(245, 75%, 65%);
+	text-decoration: none;
+}
+
+.annual-plan {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.annual-plan img {
+	width: 48px;
+	height: 48px;
+}
+
+.payment {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.payment p:nth-child(1) {
+	color: var(--clr-neutral3);
+	font-weight: var(--fw-black);
+}
+
+button {
+	font-weight: var(--fw-black);
+	font-family: inherit;
+	font-size: 14px;
+	display: block;
+	border: none;
+	border-radius: .8rem;
+	padding: 1rem 0;
+}
+
+.payment-btn {
+	background-color: var(--clr-primary2);
+	color: white;
+	margin-top: 1rem;
+}
+
+.payment-btn:is(:hover, :focus) {
+	background-color: hsl(245, 75%, 65%);
+}
+
+.cancel-btn {
+	background-color: transparent;
+	color: var(--clr-neutral2);
+}
+
+.cancel-btn:is(:hover, :focus) {
+	color: var(--clr-neutral3);
+}
